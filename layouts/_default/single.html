@@ -13,9 +13,10 @@
     {{ if or (.Params.author) (.Params.date) }}
         <p>
             {{ if .Params.author }}By {{ .Params.author }}{{ if .Date }}, {{ end }}{{ end }}
-            {{ if .Date }}{{ .Date.Format "2006-01-02" }}{{ end }}
+            {{ if .Date }}Posted: {{ .Date.Format "2006-01-02" }}{{ end }}
         </p>
     {{ end }}
+    <p>Reading Time: {{ .ReadingTime }} min</p>
 
     {{ if and (.Params.toc) (.TableOfContents) }}
 	    <hr>
