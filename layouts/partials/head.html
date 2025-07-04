@@ -40,3 +40,5 @@
 {{ end }}
 {{ with .Site.LanguageCode}}<meta property="og:locale" content="{{ . }}" />{{ end }}
 {{ with .Site.Params.about }}<meta property="og:image" content="{{ with .logo_image }}{{ . | absURL }}{{ end }}" />{{ end }}
+
+{{ partial "head_custom.html" . }}
