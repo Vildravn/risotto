@@ -17,6 +17,14 @@
         </p>
     {{ end }}
     <p>Reading Time: {{ .ReadingTime }} min</p>
+    {{ with .Params.tags }}
+        <p>
+            Tags: 
+            {{ range . }}
+                <a href="/tags/{{ . }}">{{ . }}</a>
+            {{ end }}
+        </p>
+    {{ end }}
 
     {{ if and (.Params.toc) (.TableOfContents) }}
 	    <hr>
