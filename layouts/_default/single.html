@@ -5,7 +5,9 @@
     <div class="content__body">
         {{ .Content }}
     </div>
-    <footer class="content__footer"></footer>
+    <footer class="content__footer">
+        {{ partial "content_footer_custom.html" . }}
+    </footer>
 {{ end }}
 
 {{define "aside" }}
